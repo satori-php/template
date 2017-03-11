@@ -1,7 +1,7 @@
 {
     "name": "satori/template",
-    "description": "Template",
-    "keywords": ["Template"],
+    "description": "Template View",
+    "keywords": ["Satori", "template", " view"],
     "license": "MIT",
     "authors": [
         {
