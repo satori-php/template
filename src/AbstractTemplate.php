@@ -194,7 +194,12 @@ abstract class AbstractTemplate
         $localScope = function ($vars, $file) {
             ob_start();
             extract($vars);
-            require $file;
+            try {
+                require $file;
+            } catch (\Exception $exception) {
+                ob_end_clean();
+                throw $exception;
+            }
             $_ = isset($_) ? str_pad('', $_) : '';
 
             return str_replace(PHP_EOL, PHP_EOL . $_, PHP_EOL . ob_get_clean());
