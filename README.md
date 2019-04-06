@@ -34,7 +34,7 @@ class LayoutTemplate extends AbstractTemplate
 ```
 
 template/app/layout.php
-```php
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -104,13 +104,13 @@ class ReadTemplate extends LayoutTemplate
 ```
 
 template/app/head.php
-```php
+```html
 <?php $_ = 8 ?>
 <meta name="description" content="<?= $description ?>">
 ```
 
 template/page/read.php
-```php
+```html
 <?php $_ = 12 ?>
 <article class="content">
     <h1><?= $page->name ?></h1>
